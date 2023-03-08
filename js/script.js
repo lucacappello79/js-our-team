@@ -44,3 +44,45 @@ let teamMembers = [
     console.log("Foto: " + teamMembers[i].foto);
 
   }
+
+const UlNomiEl = document.getElementById("lista-nomi");
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+  const memberName = teamMembers[i].nome;
+
+  const liEl = document.createElement('li');
+
+  liEl.textContent = memberName;
+
+  UlNomiEl.append(liEl);
+
+}
+
+
+const UlRoleEl = document.getElementById("lista-ruoli");
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+  const memberRole = teamMembers[i].ruolo;
+
+  const liEl = document.createElement('li');
+
+  liEl.textContent = memberRole;
+
+  UlRoleEl.append(liEl);
+}
+
+
+const UlFotoEl = document.getElementById("lista-foto");
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+  const memberFoto = teamMembers[i].foto;
+
+  const liEl = document.createElement('li');
+
+  liEl.textContent = memberFoto;
+
+  UlFotoEl.append(liEl);
+}
