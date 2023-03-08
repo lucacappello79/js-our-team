@@ -147,8 +147,8 @@ for (let i = 0; i < teamMembers.length; i++) {
 
   // card 
   const cardEl = document.createElement("div");
-  cardEl.classList.add("card", "col-3", "m-5");
-  cardEl.style.width = "18rem";
+  cardEl.classList.add("card", "m-5");
+  //cardEl.style.width = "18rem";
 
   // image
   const imgEl = document.createElement("img");
