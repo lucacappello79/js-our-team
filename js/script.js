@@ -45,7 +45,52 @@ let teamMembers = [
 
   }
 
+
+
 const UlNomiEl = document.getElementById("lista-nomi");
+const UlRoleEl = document.getElementById("lista-ruoli");
+const UlFotoEl = document.getElementById("lista-foto");
+
+
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+  const memberName = teamMembers[i].nome;
+  const memberRole = teamMembers[i].ruolo;
+  const memberFoto = teamMembers[i].foto;
+
+
+  const nameLiEl = document.createElement('li');
+
+  nameLiEl.textContent = memberName;
+
+  UlNomiEl.append(nameLiEl);
+
+
+  const roleLiEl = document.createElement('li');
+
+  roleLiEl.textContent = memberRole;
+
+  UlRoleEl.append(roleLiEl);
+
+
+  const picLiEl = document.createElement('li');
+  const picImgEl = document.createElement('img');
+
+  picImgEl.src = "img/" + memberFoto;
+  picLiEl.append(picImgEl);
+
+  UlFotoEl.append(picLiEl);
+}
+
+
+
+
+/*const UlNomiEl = document.getElementById("lista-nomi");
+const UlRoleEl = document.getElementById("lista-ruoli");
+const UlFotoEl = document.getElementById("lista-foto");
+
+
 
 for (let i = 0; i < teamMembers.length; i++) {
 
@@ -60,7 +105,6 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
 
 
-const UlRoleEl = document.getElementById("lista-ruoli");
 
 for (let i = 0; i < teamMembers.length; i++) {
 
@@ -74,7 +118,6 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
 
 
-const UlFotoEl = document.getElementById("lista-foto");
 
 for (let i = 0; i < teamMembers.length; i++) {
 
@@ -86,3 +129,4 @@ for (let i = 0; i < teamMembers.length; i++) {
 
   UlFotoEl.append(liEl);
 }
+*/
