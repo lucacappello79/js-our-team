@@ -37,14 +37,27 @@ let teamMembers = [
 
   ];
 
-  for (let i = 0; i < teamMembers.length; i++) {
+  /*for (let i = 0; i < teamMembers.length; i++) {
 
     console.log("Nome: " + teamMembers[i].nome);
     console.log("Ruolo: " + teamMembers[i].ruolo);
     console.log("Foto: " + teamMembers[i].foto);
 
   }
+  */
 
+  for (let i = 0; i < teamMembers.length; i++) {
+
+    let singleMember = teamMembers[i];
+
+    for (let chiaveMembro in singleMember) {
+
+      console.log(chiaveMembro);
+      console.log(singleMember[chiaveMembro]);
+    }
+
+
+  }
 
 
 const UlNomiEl = document.getElementById("lista-nomi");
@@ -141,6 +154,8 @@ for (let i = 0; i < teamMembers.length; i++) {
 const cardContainerEl = document.getElementById("card-container");
 
 for (let i = 0; i < teamMembers.length; i++) {
+
+
   const memberName = teamMembers[i].nome;
   const memberRole = teamMembers[i].ruolo;
   const memberFoto = teamMembers[i].foto;
